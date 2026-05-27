@@ -1,0 +1,93 @@
+.hero {
+  padding: 4rem 2rem 3rem;
+  text-align: center;
+  background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(168, 85, 247, 0.08), transparent 70%);
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(168, 85, 247, 0.08);
+  border: 1px solid var(--border2);
+  border-radius: 100px;
+  padding: 0.35rem 1rem;
+  font-size: 0.75rem;
+  color: var(--purple);
+  font-family: var(--font-mono);
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.05em;
+}
+
+.pulse {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--purple);
+  box-shadow: 0 0 6px var(--purple);
+  display: inline-block;
+  animation: pulse 2s ease infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(0.8); }
+}
+
+.heading {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  letter-spacing: -0.04em;
+}
+
+.sub {
+  color: var(--muted);
+  max-width: 480px;
+  margin: 0 auto 2rem;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.cta {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btnPrimary,
+.btnGhost {
+  padding: 0.75rem 2rem;
+  border-radius: var(--radius-md);
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btnPrimary {
+  background: linear-gradient(135deg, var(--purple-dim), var(--blue));
+  color: #fff;
+  border: none;
+  box-shadow: 0 0 16px rgba(168, 85, 247, 0.3);
+}
+
+.btnPrimary:hover {
+  box-shadow: 0 0 28px rgba(168, 85, 247, 0.5);
+  transform: translateY(-1px);
+}
+
+.btnGhost {
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid var(--border2);
+}
+
+.btnGhost:hover {
+  color: var(--purple);
+  border-color: var(--purple);
+  box-shadow: var(--glow-purple);
+}

@@ -1,0 +1,226 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--border);
+  background: rgba(8, 8, 16, 0.9);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  background: linear-gradient(135deg, var(--purple), var(--cyan));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.logoSuffix {
+  opacity: 0.4;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.4);
+}
+
+.actions {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.btnGhost,
+.btnPrimary {
+  padding: 0.45rem 1.1rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  letter-spacing: 0.03em;
+}
+
+.btnGhost {
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid var(--border2);
+}
+
+.btnGhost:hover {
+  color: var(--purple);
+  border-color: var(--purple);
+  box-shadow: var(--glow-purple);
+}
+
+.btnPrimary {
+  background: linear-gradient(135deg, var(--purple-dim), var(--blue));
+  color: #fff;
+  border: none;
+  box-shadow: 0 0 16px rgba(168, 85, 247, 0.3);
+}
+
+.btnPrimary:hover {
+  box-shadow: 0 0 28px rgba(168, 85, 247, 0.5);
+  transform: translateY(-1px);
+}
+
+/* ── User menu ── */
+.writeBtn {
+  padding: 0.45rem 1.1rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: rgba(168, 85, 247, 0.12);
+  color: var(--purple);
+  border: 1px solid var(--border2);
+}
+.writeBtn:hover {
+  background: rgba(168, 85, 247, 0.22);
+  box-shadow: var(--glow-purple);
+}
+
+.userMenu {
+  position: relative;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.75rem 0.35rem 0.4rem;
+  background: var(--surface);
+  border: 1px solid var(--border2);
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: var(--font-display);
+}
+.avatar:hover {
+  border-color: var(--purple);
+  box-shadow: var(--glow-purple);
+}
+
+.avatarInitial {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--purple-dim), var(--blue));
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.userName {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text);
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.chevron {
+  font-size: 0.55rem;
+  color: var(--muted2);
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: var(--bg3);
+  border: 1px solid var(--border2);
+  border-radius: var(--radius-lg);
+  min-width: 200px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.4);
+  overflow: hidden;
+  animation: fadeUp 0.15s ease;
+  z-index: 200;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.dropdownUser {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+}
+
+.dropdownInitial {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--purple-dim), var(--blue));
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.dropdownName {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.dropdownSub {
+  font-size: 0.7rem;
+  color: var(--muted2);
+  font-family: var(--font-mono);
+  margin-top: 1px;
+}
+
+.dropdownDivider {
+  height: 1px;
+  background: var(--border);
+}
+
+.dropdownItem {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0.7rem 1rem;
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  font-size: 0.83rem;
+  font-family: var(--font-display);
+  cursor: pointer;
+  transition: all 0.15s;
+  text-align: left;
+}
+.dropdownItem:hover {
+  background: var(--surface);
+  color: var(--text);
+}
+
+.dropdownLogout {
+  color: var(--pink);
+}
+.dropdownLogout:hover {
+  color: var(--pink);
+  background: rgba(236, 72, 153, 0.08);
+}
+
+/* Make logo clickable */
+.logo {
+  cursor: pointer;
+}
