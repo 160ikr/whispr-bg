@@ -1,0 +1,9 @@
+/* Make write modal wider than the default 480px */
+.wide {
+  /* parent modal is already min(480px, 100%) — we override via :global trick */
+}
+
+/* Target the modal wrapper from parent */
+:global(.write-modal-wide) {
+  width: min(560px, 100%);
+}
